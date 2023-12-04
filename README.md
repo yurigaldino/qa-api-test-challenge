@@ -22,18 +22,20 @@ git clone https://github.com/yurigaldino/qa-api-test-challenge.git
 npm install -g newman newman-reporter-htmlextra
 ```
 ## Running Tests
-Run the API tests using Newman:
+Run the API tests using Newman (only .json Postman collection file with API test cases needed):
 
 ```bash
 newman run qa-api-test-challenge-collection.json -r htmlextra
 ```
-This will execute the tests and generate an HTML test report.
+_This will only generate an HTML test report._
+
 
 Or run the following command to execute the tests:
 
 ```bash
 python qa-api-test-challenge.py
 ```
+_This will execute the tests and generate an HTML test report._
 
 ## Project Structure
 qa-api-test-challenge-collection.json: Postman collection file with API test cases.
