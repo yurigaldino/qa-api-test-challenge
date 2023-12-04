@@ -43,7 +43,7 @@ class ReqresApiTest(unittest.TestCase):
         self.assertEqual(data['job'], user_data['job'])
         self.assertEqual(response.reason, 'Created')
 
-        # Report generation
+        # Report generation (does the same what these Python code does, but generating a report)
         if platform == "linux" or platform == "linux2":
             os.system("newman run qa-api-test-challenge-collection.json -r htmlextra")
         elif platform == "win32":
