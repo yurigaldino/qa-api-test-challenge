@@ -1,6 +1,8 @@
 import requests
 import json
 import unittest
+import os
+from sys import platform
 
 class ReqresApiTest(unittest.TestCase):
     def test_1_retrieve_user_information(self):
@@ -41,5 +43,14 @@ class ReqresApiTest(unittest.TestCase):
         self.assertEqual(data['job'], user_data['job'])
         self.assertEqual(response.reason, 'Created')
 
+        # Report generation
+        if platform == "linux" or platform == "linux2":
+            os.system("newman run qa-api-test-challenge-collection.json -r htmlextra")
+        elif platform == "win32":
+            os.system("newman run qa-api-test-challenge-collection.json -r htmlextra")
+        elif platform == "darwin":
+            os.system("newman run qa-api-test-challenge-collection.json -r htmlextra")
+
 if __name__ == '__main__':
     unittest.main()
+    
