@@ -15,12 +15,8 @@ This project is an API testing framework using Newman and Postman for testing th
 ```bash
 git clone https://github.com/yurigaldino/qa-api-test-challenge.git
 ```
-2. Navigate to the project directory:
 
-```bash
-cd api-testing-project
-```
-3. Install Newman and the "htmlextra" reporter:
+2. Install Newman and the "htmlextra" reporter:
 
 ```bash
 npm install -g newman newman-reporter-htmlextra
