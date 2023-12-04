@@ -1,4 +1,4 @@
-# qa-web-test-challenge (an API Testing Project)
+# qa-api-test-challenge (an API Testing Project)
 
 This project is an API testing framework using Newman and Postman for testing the "reqres.in" API.
 
